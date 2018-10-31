@@ -28,12 +28,19 @@ export default class LinksScreen extends Component {
       dataSource: new ListView.DataSource({
         rowHasChanged: (r1, r2) => r1 !== r2
       }).cloneWithRows([
-        'Gerência de Projetos',
-        'Marketing',
-        'Gestão de Pessoas',
-        'Qualidade',
-        'Administração Financeira',
-        'Presidência',
+        'Lucas Stocco - Presidente',
+        'Larissa Domenico - Vice Presidencia',
+
+        'Diretora Projetos - Gabriela',
+        'Gerentes Projetos - Laís Alves, Rodolfo e Samuel',
+        'Projetistas - Bárbara, Ludmila',
+
+        'Diretor Marketing - Daniel',
+        'Analista Marketing - Jonathas',
+
+        'Gerente de Desenvolvimento - Monique',
+
+        'Gerente de Qualidade - Emerson'
       ])
     };
   }

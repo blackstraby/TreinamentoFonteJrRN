@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Alert } from 'react-native'
 import { Icon } from 'react-native-elements'
 import PropTypes from 'prop-types'
 
@@ -77,7 +77,7 @@ const Search = ({ title, navigation, leftIcon }) => (
         </Text>
       </View>
       <View style={styles.rightRow}>
-        <Text style={styles.logoutText}>Log out</Text>
+        <Text onPress={() => { Alert.alert('Logout', 'Até logo!') }} style={styles.logoutText}>Log out</Text>
       </View>
     </View>
   </View>
