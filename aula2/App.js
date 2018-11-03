@@ -1,12 +1,29 @@
 //import
 import React from "react";
-import { View, Text, Button, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, Button, StyleSheet, TouchableOpacity, TextInput } from "react-native";
 
 //criar constante
 const pi = 3.14;
 
+let pessoa = {
+  nome: 'jose',
+  idade: 20,
+  dtNascimento: "2018-08-27",
+  //qualquer propriedades
+
+}
+
+
 //classe
 export default class App extends React.Component {
+  //construtor
+  constructor() {
+    super();
+    this.state = {
+      texto: 'Digite aqui...'
+    }
+  }
+  //state
 
   soma = () => {
     let n1 = 10;         //inteiro
@@ -64,7 +81,19 @@ export default class App extends React.Component {
         </View>
 
         <View>
-          <Text>Rodape</Text>
+
+          <TextInput
+            // propriedade={ alguma coisa }
+            // funcao={ () => this.algumaCoisa() }
+            value={this.state.texto}
+            onChangeText={(value) => this.setState({ texto: value })}
+
+          />
+          <Button
+            title='Aperte aqui'
+            onPress={() => alert(this.state.texto)}
+          />
+
         </View>
 
       </View>
@@ -80,7 +109,6 @@ const estilo = StyleSheet.create({
   },
 
   cabecalho: {
-    flex: 2,
     padding: 10,
     alignItems: 'center',
     justifyContent: 'center',
@@ -89,7 +117,6 @@ const estilo = StyleSheet.create({
 
   corpo: {
     flexDirection: 'row',
-    flex: 2
   },
 
   rodape: {
